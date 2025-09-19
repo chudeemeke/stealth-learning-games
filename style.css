@@ -1,0 +1,184 @@
+/* Global layout styles */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  /* Subtle gradient background for polish */
+  background: linear-gradient(180deg, #f7faff 0%, #e9f5ff 100%);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #78c2ff;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav .logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.nav .nav-items {
+  display: flex;
+  gap: 1rem;
+}
+.nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav button:hover {
+  text-decoration: underline;
+}
+
+/* General button styles */
+.btn {
+  background-color: #ffd966;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn:hover {
+  background-color: #ffb366;
+}
+.btn-primary {
+  background-color: #78c2ff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #5ca5e6;
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Grid for game selection */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  /* The img tag is unused in the emoji-based interface but retained for
+     potential fallback. Hide it to avoid stray space. */
+  display: none;
+}
+.emoji-icon {
+  font-size: 3rem;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.card .title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Game canvas */
+.game-canvas {
+  width: 100%;
+  height: 400px;
+  background-color: #e9f5ff;
+  border: 2px solid #a4d79c;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Memory game tiles */
+.memory-board {
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.memory-tile {
+  width: 60px;
+  height: 80px;
+  background-color: #78c2ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s;
+}
+.memory-tile.flipped {
+  background-color: #ffd966;
+  color: #333;
+}
+.memory-tile.removed {
+  visibility: hidden;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.analytics-table th,
+.analytics-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.analytics-table th {
+  background-color: #f0f4ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .nav .nav-items button {
+    font-size: 1rem;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+}

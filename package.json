@@ -1,0 +1,40 @@
+{
+  "name": "stealth-learning-games",
+  "version": "6.0.0",
+  "description": "Educational web application with interactive mini-games for Math, English, and Science skills",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000 || python -m http.server 8000",
+    "dev": "npx browser-sync start --server --files '**/*.js,**/*.css,**/*.html' --no-notify --port 3000",
+    "format": "npx prettier --write '**/*.{js,css,html,json,md}'",
+    "lint": "npx eslint '**/*.js'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "education",
+    "games",
+    "learning",
+    "children",
+    "math",
+    "english",
+    "science",
+    "interactive"
+  ],
+  "author": "Chude Emeke <chude@emeke.org>",
+  "license": "All rights reserved",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chudeemeke/stealth-learning-games.git"
+  },
+  "homepage": "https://chudeemeke.github.io/stealth-learning-games/",
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@10.17.0"
+}
