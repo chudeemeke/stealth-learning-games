@@ -130,3 +130,8 @@ This project is owned by Chude Emeke. All rights reserved.
 ## Contact
 
 For questions or feedback, please contact Chude at chude@emeke.org
+## 🤖 CI/CD Auto-Fix
+
+This repository uses Claude AI to automatically fix CI/CD failures.
+If builds fail, Claude will automatically create a fix PR.
+
